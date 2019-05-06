@@ -1,0 +1,39 @@
+.bookBlock{
+    margin: 5%;
+    background-color: rgb(92, 103, 156);
+    display: inline-block;
+    width: 23%;
+    height: auto;
+    max-width: 600px;
+    align-items: center;
+    overflow: hidden;
+}
+.bookImage{
+    height: auto;
+    display: block;
+   
+    width: 100%;
+}
+.image{
+    height: inherit;
+    width: 100%;
+}
+.bookDiscription{
+    width: 50%;
+    text-align: left;
+    display: block;
+    
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom:30px;
+    padding-top: 25px;
+    width: 100%;
+}
+.bookbutton{
+    width: 90%;
+    background-color: rgb(49, 136, 177);
+    text-align: center;
+    margin-left: 5%;
+    height: 50px;
+    margin-bottom:30px;
+}
