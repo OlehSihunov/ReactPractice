@@ -16,13 +16,17 @@ componentWillMount()
 }
 render()
 {
+
    console.log(this.props.CurrentChapter)
     return(<div>
         <ChapterText chapt={this.props.CurrentChapter}/>
         <div>
-            <button>Previous</button>
-            <button onClick={()=>{ this.props.history.push('/Book/' + this.props.match.params.BookId)}}>Book</button>
-            <button>Next</button>
+            <a href={'/Book/'+ 
+            this.props.CurrentChapter.BookId+'/'
+            +(this.props.CurrentChapter.ChapterNumber-1)}>Previous</a>
+           <a href={'/Book/' + this.props.match.params.BookId}>Book</a>
+            <a href={'/Book/'+   this.props.CurrentChapter.BookId+'/'
+            +(this.props.CurrentChapter.ChapterNumber+1)}>Next</a>
         </div>
         </div>)
 }
