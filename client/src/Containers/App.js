@@ -18,7 +18,9 @@ class App extends Component{
  render() {
   return (
     <div className ="AppBody">
-      <div className="header"></div>
+      <div className="header">
+      <a href={'/'}>Go Home</a>
+      </div>
      { <Route path ="/"  exact component ={BookMin}/>}
       <Route path ="/Book/:id" exact render={(props)=><BookPage {...props}/>}/>
       <Route path = "/Book/:BookId/:ChapterNumber" exact render={(props)=><Chapter {...props}/>}/>
