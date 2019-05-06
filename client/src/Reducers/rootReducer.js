@@ -7,6 +7,5 @@ const rootReducer= combineReducers({
     books,
     chapters,
     chapter
-});
-
+})
 export default rootReducer;

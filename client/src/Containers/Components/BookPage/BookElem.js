@@ -5,10 +5,11 @@ export default class BookElement extends React.Component
 {
     render()
     {
+        //тут треа буде дописати функцію ходьби до наступного елементу
         return(
             <React.Fragment>
                     <div  >
-                         <img src="../img/1.png" alt="booktitle"  ></img>
+                         <img src={'../img/'+this.props.book._id+'.png'} alt="booktitle"  ></img>
                     </div>
                 <div className ="bookDiscription">
                     <div className="discrPoint">id: {this.props.book._id} </div>
@@ -19,7 +20,7 @@ export default class BookElement extends React.Component
                 <div>
                     {
                         this.props.chapters.map((chapter)=>{
-                            return <ChapterElement key={chapter._id} chapter ={chapter}/>
+                            return <ChapterElement key={chapter._id} chapter ={chapter}  lastIndex = {this.props.chapters[this.props.chapters.length-1].ChapterNumber}/>
                         })
                     }
                 </div>

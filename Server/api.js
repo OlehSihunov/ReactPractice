@@ -52,4 +52,6 @@ router.get('/chapters/:id/:type',(req,res)=>
     .then(chapters=>{res.send(chapters)});
 })
 
+
+
 module.exports  = router;

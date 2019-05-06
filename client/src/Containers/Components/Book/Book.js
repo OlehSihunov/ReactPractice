@@ -3,16 +3,13 @@ import './Book.css';
 import {withRouter} from 'react-router-dom'
 export  class Book extends React.Component
 {
-    
-    
-
     render()
     {
  
         return(
             <div className="bookBlock">
                 <div className = "bookImage" >
-                    <img src="./img/1.png" alt="booktitle"  className="image"></img>
+                    <img src={'../img/'+this.props.id+'.png'} alt="booktitle"  className="image"></img>
                 </div>
                 <div className ="bookDiscription">
                     <div className="discrPoint">Id: {this.props.id} </div>
@@ -24,7 +21,7 @@ export  class Book extends React.Component
                      
                      this.props.history.push('/Book/' + this.props.id)}
                       }>
-                    
+                    <p>Read</p>
                 </div>
             </div>
         )

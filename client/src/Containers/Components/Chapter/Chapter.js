@@ -2,7 +2,9 @@ import React from 'react'
 import {connect} from 'react-redux'
 import { chapterFetch } from '../../../Actions/chapterActions';
 import ChapterText from './ChapterText'
-import {withRouter} from 'react-router-dom'
+import { chaptersGetLast } from '../../../Actions/chaptersActions';
+
+
 class Chapter extends React.Component
 {
 componentWillMount()
@@ -13,32 +15,45 @@ componentWillMount()
         '/'
         +this.props.match.params.ChapterNumber);
 
+        this.props.fetchLast('/api/chapters/'+this.props.match.params.BookId)
+
+}
+checkIndex=(Next)=>{
+if(Next<0)
+return this.props.CurrentChapter.ChapterNumber;
+
+if(Next>this.props.Last)
+return this.props.CurrentChapter.ChapterNumber;
+
+return Next;
 }
 render()
 {
 
-   console.log(this.props.CurrentChapter)
     return(<div>
         <ChapterText chapt={this.props.CurrentChapter}/>
         <div>
             <a href={'/Book/'+ 
             this.props.CurrentChapter.BookId+'/'
-            +(this.props.CurrentChapter.ChapterNumber-1)}>Previous</a>
+            +this.checkIndex(this.props.CurrentChapter.ChapterNumber-1)}>Previous</a>
            <a href={'/Book/' + this.props.match.params.BookId}>Book</a>
             <a href={'/Book/'+   this.props.CurrentChapter.BookId+'/'
-            +(this.props.CurrentChapter.ChapterNumber+1)}>Next</a>
+            +this.checkIndex(this.props.CurrentChapter.ChapterNumber+1)}>Next</a>
         </div>
         </div>)
 }
 }
 const mapStateToProps=state=>{
+    
     return{
-        CurrentChapter:state.chapter
+        CurrentChapter:state.chapter,
+        Last:state.chapters
     }
 }
 const mapDispatchToProps=dispatch=>{
     return{
-        fetchChapter:url=>dispatch(chapterFetch(url))
+        fetchChapter:url=>dispatch(chapterFetch(url)),
+        fetchLast:url=>dispatch(chaptersGetLast(url))
     }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(Chapter)

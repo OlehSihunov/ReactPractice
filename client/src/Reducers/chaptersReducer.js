@@ -6,6 +6,10 @@ export function chapters(state=[],action){
                
              return action.chapters;
             }
+        case "CHAPTERS_LAST_GET_SUCCES":
+            {
+                return action.last
+            }
         default:
             return state;
 

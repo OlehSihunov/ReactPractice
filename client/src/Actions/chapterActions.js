@@ -12,7 +12,7 @@ export function chapterFetch(url){
             {
                 throw new Error(response.statusText)
             }
-            console.log(111);
+           
             return response
         }).then(response=>response.json())
         .then(chapter=>{dispatch(chapterFetchSucces(chapter))})
