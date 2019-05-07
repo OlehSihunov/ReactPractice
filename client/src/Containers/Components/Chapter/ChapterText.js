@@ -7,7 +7,7 @@ export default class ChapterText extends React.Component
         return(
             <React.Fragment>
                <div><h1>{this.props.chapt.ChapterNumber} {this.props.chapt.Title}</h1></div>
-                <div>{this.props.chapt.Text}</div>
+                <div dangerouslySetInnerHTML={{ __html: this.props.chapt.Text }}></div>
             </React.Fragment>
         )
     }
