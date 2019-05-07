@@ -9,7 +9,7 @@ export  class Book extends React.Component
         return(
             <div className="bookBlock">
                 <div className = "bookImage" >
-                    <img src={'../img/'+this.props.id+'.png'} alt="booktitle"  className="image"></img>
+                    <img src={'../img/'+this.props.ImageName} alt="booktitle"  className="image"></img>
                 </div>
                 <div className ="bookDiscription">
                     <div className="discrPoint">{this.props.name} </div>

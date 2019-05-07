@@ -29,7 +29,9 @@
 
 .bookDiscription .discrPoint{
     font-size: 1.25rem;
+    padding-bottom: 2rem;
     color: #777;
+    font-size: 1.2rem;
 }
 
 .bookDiscription .discrPoint:first-child{
@@ -49,6 +51,7 @@
     color: #fff;
     transition: all .25s;
     cursor: pointer;
+    text-decoration: none
 }
 
 .bookbutton:hover{
@@ -74,16 +77,24 @@
 }
 .headerText
 {
-    padding: 1rem 2rem;
+    padding-top: 0rem;
+    padding-bottom: 1rem;
     display: inline-block;
     color: #fff;
     text-decoration: none;
-    
+    font-size: 1.4rem;
 }
+
 .headerLogo
 {
     display: inline-block;
     margin-right: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.headerMakkou
+{
+    height: 4rem;
 }
 
 .headerLogo a{
@@ -115,10 +126,12 @@
 
 .book_bootom h2{
     margin-bottom: 1rem;
+    font-size: 1.75rem;
 }
 
 .book_bootom .discrPoint{
     margin-bottom: 3rem;
+    font-size: 1.2rem;
 }
 
 .single-book{
@@ -132,21 +145,25 @@
 
 .chapters_wrapper{
     display: flex;
+    flex-direction: column;
     justify-content: space-between; 
 }
 
 .chapter{
     flex: 0 0 20%;
-    padding: 5rem 2rem;
+    padding: 2rem 2rem;
+    margin-bottom: 1rem;
     border-radius: 15px;
-    border: solid #222 2px;
+    
     color: #222;
     text-decoration: none;
+    background-color: rgb(226, 226, 226);
     transition: all .25s;
+    
 }
 
 .chapter:hover{
-    border: solid #47cf73 2px;
+    border: solid #47cf73 1px;
     color: #47cf73;
 }
 
@@ -154,7 +171,8 @@
     text-align: center;
     font-weight: 900;
     font-size: 1rem;
-    padding-top: 1rem;
+    padding-top: 0.75rem;
+  
 }
 
 .chapter div:last-child{

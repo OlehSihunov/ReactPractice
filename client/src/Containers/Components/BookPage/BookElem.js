@@ -9,7 +9,7 @@ export default class BookElement extends React.Component
         return(
             <React.Fragment>
                     <div  className="book">
-                         <img src={'../img/'+this.props.book._id+'.png'} alt="booktitle"  ></img>
+                         <img src={'../img/'+this.props.book.ImageName} alt="booktitle"  ></img>
                     </div>
                 <div className ="bookDiscription book-addition-info">
                     {/* <div className="discrPoint">id: {this.props.book._id} </div> */}
