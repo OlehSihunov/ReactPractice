@@ -12,15 +12,15 @@ export  class Book extends React.Component
                     <img src={'../img/'+this.props.id+'.png'} alt="booktitle"  className="image"></img>
                 </div>
                 <div className ="bookDiscription">
-                    <div className="discrPoint">Name: {this.props.name} </div>
-                    <div className="discrPoint">Author: {this.props.author} </div>
+                    <div className="discrPoint">{this.props.name} </div>
+                    <div className="discrPoint">{this.props.author} </div>
                 </div>
-                <div  className="bookbutton" onClick={()=>{
+                <a href="#"  className="bookbutton" onClick={()=>{
                      
                      this.props.history.push('/Book/' + this.props.id)}
                       }>
                     <p>Read</p>
-                </div>
+                </a>
             </div>
         )
     }

@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {connect} from "react-redux";
 import {booksFetchData} from "../../../Actions/bookActions";
 import Book from './Book';
-import './Book.css'
+
 
 
  class BookMin extends Component{

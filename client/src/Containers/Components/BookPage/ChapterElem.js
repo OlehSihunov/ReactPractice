@@ -9,18 +9,11 @@ export class ChapterElement extends React.Component
     {
         console.log(this.props)
         return(
-            <React.Fragment>
-               <div style={{border:"1px solid black"}}>
-                   <div>{ this.props.chapter.ChapterNumber} {this.props.chapter.Title} </div> 
-                   <div>{this.props.chapter.DatePublish} </div>
-                    <div>
-                        <a href= {'/Book/'+this.props.chapter.BookId+
-                    '/'+this.props.chapter.ChapterNumber}>Read</a>
-                    </div>
-                
-                
-               </div>
-            </React.Fragment>
+                <a className="chapter card-1" target="_blank" href= {'/Book/'+this.props.chapter.BookId+
+                        '/'+this.props.chapter.ChapterNumber}>
+                    <div>{this.props.chapter.Title} </div> 
+                    <div>{this.props.chapter.DatePublish} </div>
+                </a>
         )
     }
 }

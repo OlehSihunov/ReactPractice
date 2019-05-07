@@ -30,27 +30,27 @@ return Next;
 render()
 {
     if(this.props.CurrentChapter.ChapterNumber===0)
-    return(<div>
+    return(<div className="chapterText">
         <ChapterText chapt={this.props.CurrentChapter}/>
-        <div>
+        <div className="btns">
            <a href={'/Book/' + this.props.match.params.BookId}>Book</a>
             <a href={'/Book/'+   this.props.CurrentChapter.BookId+'/'
             +this.checkIndex(this.props.CurrentChapter.ChapterNumber+1)}>Next</a>
         </div>
         </div>)
     if(this.props.CurrentChapter.ChapterNumber===this.props.Last)
-    return(<div>
+    return(<div className="chapterText">
         <ChapterText chapt={this.props.CurrentChapter}/>
-        <div>
+        <div className="btns">
             <a href={'/Book/'+ 
             this.props.CurrentChapter.BookId+'/'
             +this.checkIndex(this.props.CurrentChapter.ChapterNumber-1)}>Previous</a>
            <a href={'/Book/' + this.props.match.params.BookId}>Book</a>
         </div>
         </div>)
-    return(<div>
+    return(<div className="chapterText">
         <ChapterText chapt={this.props.CurrentChapter}/>
-        <div>
+        <div className="btns">
             <a href={'/Book/'+ 
             this.props.CurrentChapter.BookId+'/'
             +this.checkIndex(this.props.CurrentChapter.ChapterNumber-1)}>Previous</a>

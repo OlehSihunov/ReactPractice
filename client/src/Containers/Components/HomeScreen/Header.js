@@ -1,5 +1,5 @@
 import React from 'react'
-import './Book.css'
+
 
 export default class Header extends React.Component
 {
@@ -8,7 +8,7 @@ export default class Header extends React.Component
         return(
             <div className= "Header">
                 <div className="headerLogo"><a href='/'><p>VictoryAlliance</p></a></div>
-                <div className ="headerText"><p>about us</p></div>
+                <a href="#" className ="headerText">about us</a>
                 <div></div>
             </div>
         )

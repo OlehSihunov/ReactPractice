@@ -16,7 +16,7 @@ import {chaptersFetchData} from "../../../Actions/chaptersActions";
     render()
     {
           return(
-             <div>
+             <div className="container single-book">
               
                  { console.log(this.props.chapters)}
                 <BookElement book={this.props.book} chapters = {this.props.chapters}></BookElement>   
