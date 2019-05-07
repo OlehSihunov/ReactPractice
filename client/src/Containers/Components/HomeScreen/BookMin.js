@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux";
-import {booksFetchData} from "../../Actions/bookActions";
-import Book from './Book/Book';
+import {booksFetchData} from "../../../Actions/bookActions";
+import Book from './Book';
+import './Book.css'
 
 
  class BookMin extends Component{
@@ -17,7 +18,7 @@ import Book from './Book/Book';
     {
       console.log(this.props)
         return(
-        <div  >
+        <div  className="BookMin" >
             {this.props.books.map((book)=>{
               return <Book key={book._id} id = {book._id} name = {book.name} author = {book.author} discription = {book.discription}/>
             })}

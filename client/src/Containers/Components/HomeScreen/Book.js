@@ -12,10 +12,8 @@ export  class Book extends React.Component
                     <img src={'../img/'+this.props.id+'.png'} alt="booktitle"  className="image"></img>
                 </div>
                 <div className ="bookDiscription">
-                    <div className="discrPoint">Id: {this.props.id} </div>
                     <div className="discrPoint">Name: {this.props.name} </div>
                     <div className="discrPoint">Author: {this.props.author} </div>
-                    <div className="discrPoint">Discription: {this.props.discription}</div>
                 </div>
                 <div  className="bookbutton" onClick={()=>{
                      

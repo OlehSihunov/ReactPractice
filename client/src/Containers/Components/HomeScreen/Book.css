@@ -1,11 +1,12 @@
+/*Start of book element block*/
 .bookBlock{
-    margin: 5%;
+    margin: 2%;
     background-color: rgb(92, 103, 156);
     display: inline-block;
-    width: 23%;
+    width: 25%;
     height: auto;
     max-width: 600px;
-    align-items: center;
+    align-items: justify;
     overflow: hidden;
 }
 .bookImage{
@@ -36,4 +37,32 @@
     margin-left: 5%;
     height: 50px;
     margin-bottom:30px;
+}
+/*End of book element block*/
+.BookMin
+{
+    display: flexbox;
+    width: 80%;
+    margin-left: 10%;
+    align-items: justify;
+}
+/*Start of header block*/
+.Header {
+    width: 100%;
+    background: green;
+    height: 50px;
+    
+}
+.headerText
+{
+    padding-top: 15px;
+    display: inline-block;
+    
+}
+.headerLogo
+{
+  
+    display: inline-block;
+    margin-left: 5%;
+    margin-right: 5%;
 }
