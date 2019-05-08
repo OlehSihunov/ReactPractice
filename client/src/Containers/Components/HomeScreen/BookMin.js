@@ -20,7 +20,7 @@ import Book from './Book';
         return(
         <div  className="BookMin" >
             {this.props.books.map((book)=>{
-              return <Book key={book._id} id = {book._id} name = {book.name} author = {book.author} discription = {book.discription}/>
+              return <Book book={book} key = {book._id}/>
             })}
         </div>)
     }

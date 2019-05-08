@@ -11,14 +11,15 @@ import {chaptersFetchData} from "../../../Actions/chaptersActions";
     componentWillMount()
     {
       this.props.fetchBookData('/api/book/'+this.props.match.params.id);
+      console.log('/api/book/'+this.props.match.params.id);
       this.props.fetchChapterData('/api/chapters/'+this.props.match.params.id);
     }
     render()
     {
+      console.log('!!!')
+      console.log(this.props)
           return(
              <div className="container single-book">
-              
-                 { console.log(this.props.chapters)}
                 <BookElement book={this.props.book} chapters = {this.props.chapters}></BookElement>   
             </div>
         )
