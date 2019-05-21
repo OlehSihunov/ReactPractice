@@ -47,13 +47,13 @@ router.get('/chapters/:id',(req,res)=>
     Chapter.find({BookId:req.params.id})
     .then(chapters=>{res.send(chapters)});
 })
-// router.get('/chapters/:id/:type',(req,res)=>
-// {
-//     console.log(req.params)
-//     Chapter.findOne({BookId:req.params.id,
-//         ChapterNumber:Number(req.params.type)})
-//     .then(chapters=>{res.send(chapters)});
-// })
+ router.get('/chapters/:id/:type',(req,res)=>
+ {
+     console.log(req.params)
+     Chapter.findOne({BookId:req.params.id,
+         ChapterNumber:Number(req.params.type)})
+     .then(chapters=>{res.send(chapters)});
+ })
 
 router.delete("/chapters/:id",(req,res)=>
 

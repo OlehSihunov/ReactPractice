@@ -3,7 +3,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import { removeChapter } from '../../Actions/chapterActions';
 
- class Book extends React.Component
+ class Chapter extends React.Component
 {
     clickHandler()
     {    
@@ -16,7 +16,7 @@ import { removeChapter } from '../../Actions/chapterActions';
         return(<div className="Item">
             <p>{ this.props.chapter.Title}</p>
             <p>{this.props.chapter.BookId}</p>
-            <button onClick = {()=>this.clickHandler()}>Delete</button>
+            <button onClick = {()=>this.clickHandler()}>Delete1</button>
         </div>)
     }
 }
@@ -30,4 +30,4 @@ const mapDispatchToProps=dispatch=>{
       removeChapter: id=>dispatch(removeChapter(id))
     };
   }
-  export default connect(mapStateToProps,mapDispatchToProps)(Book);
+  export default connect(mapStateToProps,mapDispatchToProps)(Chapter);

@@ -18,7 +18,7 @@ import {booksFetchData} from '../../Actions/bookActions'
   }
    clickHandler()
    {
-    
+    console.log(this.state)
     this.props.addChapter(this.state)
    }
     render()
@@ -33,9 +33,12 @@ import {booksFetchData} from '../../Actions/bookActions'
                     return <option value ={book._id} key ={book._id}>{book.name}</option>
                 })}}
             </select>
+            <br></br><label>Title</label>
             <input type="text" className="" onChange={(e) => this.setState({Title: e.target.value})}  name="title" />
+            <br></br><label>Text</label>
             <input type="text" className="" onChange={(e) => this.setState({Text: e.target.value})}  name="title" />
-            <input type="text" className="" onChange={(e) => this.setState({ChapterNumber: e.target.value})}  name="title" />
+            <br></br><label>ChapterNumber</label>
+            <input type="text" className="" onChange={(e) => this.setState({ChapterNumber: Number(e.target.value)})}  name="title" />
             <button onClick= {()=>this.clickHandler()}>AddChapter</button>
             </div>
         )

@@ -5,7 +5,7 @@ const ChapterSchema = new Schema({
     Text: String,
     DatePublish: Date,
     BookId: String,
-    ChapterNumver:Number
+    ChapterNumber:Number
 })
 const chapter= mongoose.model("chapter",ChapterSchema);
 module.exports = chapter;
