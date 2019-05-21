@@ -4,6 +4,7 @@ const BookSchema = new Schema({
     name: String,
     author:String,
     discription:String,
+    translator:String,
     ImageName:String
 })
 const Book= mongoose.model("book",BookSchema);

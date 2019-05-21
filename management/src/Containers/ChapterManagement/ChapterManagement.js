@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from "react-redux";
 import {chaptersFetchData} from "../../Actions/chaptersActions";
+import Chapter from './Chapter';
 class ChapterManagment extends React.Component
 {
     componentWillMount()
@@ -13,7 +14,7 @@ class ChapterManagment extends React.Component
             <div>
             {this.props.chapters.map((chapter)=>
                 {
-                   return <p key = {chapter._id}>{chapter.Title}</p>
+                   return <Chapter key = {chapter._id} chapter= {chapter}/>
                 })}
             </div>
         )

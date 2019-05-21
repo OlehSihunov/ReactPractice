@@ -18,3 +18,19 @@ export function booksFetchData(url){
     }
 }
 
+export function removeBookSucces()
+{
+    return {
+        type :"BOOKS_REMOVE_SUCCESS"
+
+    }
+}
+export function removeBook(id)
+{
+    return(dispatch)=>{
+        fetch('api/book/'+ id, {
+          method: 'DELETE'
+        }).then(() => {
+           console.log('removed');
+        }).then(()=>dispatch(removeBookSucces()));}
+}

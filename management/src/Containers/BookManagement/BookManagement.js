@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from "react-redux";
 import {booksFetchData} from "../../Actions/bookActions";
+import Book from './Book';
 class BookManagement extends React.Component
 {
     componentWillMount()
@@ -13,7 +14,7 @@ class BookManagement extends React.Component
             <div>
             {this.props.books.map((book)=>
                 {
-                   return <p key = {book._id}>{book.name}</p>
+                   return <Book book = {book} key = {book._id}/>
                 })}
             </div>
         )

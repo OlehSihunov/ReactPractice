@@ -28,7 +28,9 @@ router.put("/book/:id",(req,res)=>
     .then(book=>{res.send(book)});
 })
 router.delete("/book/:id",(req,res)=>
+
 {
+    console.log("Delete try")
     Book.deleteOne({_id:req.params.id})
     .then(book=>{
         res.send(book);
