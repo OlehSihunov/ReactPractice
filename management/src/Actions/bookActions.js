@@ -18,7 +18,7 @@ export function booksFetchData(url){
     }
 }
 
-export function removeBookSucces()
+export function removeBookSuccess()
 {
     return {
         type :"BOOKS_REMOVE_SUCCESS"
@@ -32,5 +32,31 @@ export function removeBook(id)
           method: 'DELETE'
         }).then(() => {
            console.log('removed');
-        }).then(()=>dispatch(removeBookSucces()));}
+        }).then(()=>dispatch(removeBookSuccess()));}
+}
+
+export function addBook(book)
+{
+    return(dispatch)=>
+    {
+      
+        
+        fetch('api/book', {
+            method: 'POST', 
+            headers: {
+                'Accept': 'application/json, text/plain, */*',
+                'Content-Type': 'application/json'
+              },
+            body:JSON.stringify(book)
+          }).then(res=>{ res.json()
+          }).then(()=>dispatch(addBookSuccess()));
+        
+    }
+}
+export function addBookSuccess()
+{
+    return { 
+        type:"BOOK_ADD_SUCCESS"
+    }
+    
 }

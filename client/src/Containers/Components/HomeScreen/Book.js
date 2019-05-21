@@ -7,20 +7,22 @@ export  class Book extends React.Component
     {
  
         return(
+            
             <div className="bookBlock">
+
                 <div className = "bookImage" >
-                    <img src={'../img/'+this.props.ImageName } alt="booktitle"  className="image"></img>
+                    <img src={'../img/'+this.props.book.ImageName } alt="booktitle"  className="image"></img>
                 </div>
                 <div className ="bookDiscription">
-                    <div className="discrPoint">{this.props.name} </div>
-                    <div className="discrPoint">{this.props.author} </div>
+                    <div className="discrPoint">{this.props.book.name} </div>
+                    <div className="discrPoint">{this.props.book.author} </div>
                 </div>
-                <a href="#"  className="bookbutton" onClick={()=>{
+                <p className="bookbutton" onClick={()=>{
                      
-                     this.props.history.push('/Book/' + this.props.id)}
+                     this.props.history.push('/Book/' + this.props.book._id)}
                       }>
-                    <p>Read</p>
-                </a>
+                    Read
+                </p>
             </div>
         )
     }

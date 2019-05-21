@@ -15,6 +15,7 @@ router.get("/book/:id",(req,res)=>
 })
 router.post("/book",(req,res)=>
 {
+    console.log(req.body);
     Book.create(
         req.body
     ).then(book=>{
@@ -46,14 +47,30 @@ router.get('/chapters/:id',(req,res)=>
     Chapter.find({BookId:req.params.id})
     .then(chapters=>{res.send(chapters)});
 })
-router.get('/chapters/:id/:type',(req,res)=>
+// router.get('/chapters/:id/:type',(req,res)=>
+// {
+//     console.log(req.params)
+//     Chapter.findOne({BookId:req.params.id,
+//         ChapterNumber:Number(req.params.type)})
+//     .then(chapters=>{res.send(chapters)});
+// })
+
+router.delete("/chapters/:id",(req,res)=>
+
 {
-    console.log(req.params)
-    Chapter.findOne({BookId:req.params.id,
-        ChapterNumber:Number(req.params.type)})
-    .then(chapters=>{res.send(chapters)});
+    console.log("Delete chapter try")
+    Chapter.deleteOne({_id:req.params.id})
+    .then(Chapter=>{
+        res.send(Chapter);
+    });
 })
-
-
-
+router.post("/chapters",(req,res)=>
+{
+    console.log(req.body);
+    Chapter.create(
+        req.body
+    ).then(chapter=>{
+        res.send(chapter);
+    })
+})
 module.exports  = router;

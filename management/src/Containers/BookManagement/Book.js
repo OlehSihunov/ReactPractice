@@ -12,7 +12,7 @@ import {connect} from 'react-redux'
 
     
     render(){
-        return(<div className="Book">
+        return(<div className="Item">
             <p>{ this.props.book.name}</p>
             <p>{this.props.book.author}</p>
             <button onClick = {()=>this.clickHandler()}>Delete</button>

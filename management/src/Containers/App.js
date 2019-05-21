@@ -5,6 +5,8 @@ import {Route} from 'react-router-dom';
 import {booksFetchData} from "../Actions/bookActions";
 import SideBar from './SideBar/SideBar';
 import ChapterManagement from './ChapterManagement/ChapterManagement';
+import AddBook from './BookManagement/AddBook';
+import AddChapter from './ChapterManagement/AddChapter';
 
 
 
@@ -23,6 +25,8 @@ class App extends Component{
       <SideBar></SideBar>
       <Route  path = "/BookM" exact render ={()=><BookManagement/>}/>
       <Route  path = "/ChapterM" exact render ={()=><ChapterManagement/>}/>
+      <Route path = "/AddBook" exact render ={()=><AddBook/>}/>
+      <Route path = "/AddChapter" exact render ={()=><AddChapter/>}/>
       </div>
   );
 }

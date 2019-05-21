@@ -16,7 +16,7 @@ import Book from './Book';
     
     render()
     {
-      console.log(this.props)
+     
         return(
         <div  className="BookMin" >
             {this.props.books.map((book)=>{
