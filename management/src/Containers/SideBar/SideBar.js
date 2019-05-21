@@ -7,8 +7,8 @@ export default class SideBar extends React.Component
     {
         return(
             <div className="SideBar">
-            <NavLink to = {""}>BookManage</NavLink> <p></p>
-            <NavLink to = {""}>ChapterManege</NavLink>
+            <NavLink to = {"/BookM"}>BookManage</NavLink> <p></p>
+            <NavLink to = {"/ChapterM"}>ChapterManege</NavLink>
             </div>
         )
     }
