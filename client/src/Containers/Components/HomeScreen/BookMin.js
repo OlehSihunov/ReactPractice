@@ -19,6 +19,7 @@ import Book from './Book';
      
         return(
         <div  className="BookMin" >
+          <img src="/img/baner.jpg" className="mainImage"></img>
             {this.props.books.map((book)=>{
               return <Book book={book} key = {book._id}/>
             })}

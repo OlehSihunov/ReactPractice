@@ -20,7 +20,7 @@ class App extends Component{
   return (
     <div className ="AppBody">
       <Header></Header>
-      {/*Search + banner */}
+      
       
      { <Route path ="/"  exact component ={BookMin}/>}
       <Route path ="/Book/:id" exact render={(props)=><BookPage {...props}/>}/>

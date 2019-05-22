@@ -26,7 +26,11 @@
     padding: 0 2rem 2.5rem 2rem;
     width: 100%;
 }
+.mainImage
+{
+    height: 250px;
 
+}
 .bookDiscription .discrPoint{
     font-size: 1.25rem;
     padding-bottom: 2rem;
