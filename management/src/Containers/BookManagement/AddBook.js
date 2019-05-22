@@ -16,29 +16,30 @@ import {booksFetchData} from '../../Actions/bookActions';
     {
         console.log(this.state)
             this.props.addBook(this.state)
+            window.location.reload();
     }
     render()
     {
         return(
-            <div className="AddBook">
-                <h1>Add book</h1>
-                <label>name</label>
+            <div className="addBook">
+                <h1>Додати Книгу</h1>
+                <label>Назва книги</label>
                 <input type="text" className="" 
                 onChange={(e) => this.setState({name:e.target.value})}  name="title" />
-                <br></br><label>author</label>
+                <label>Автор книги </label>
                 <input type="text" className=""
                 onChange={(e) => this.setState({author: e.target.value})}  name="title" />
-                  <br></br><label>discription</label>
-                  <input type="text" className=""
-                onChange={(e) => this.setState({discription: e.target.value})}  name="title" />
+                  <label>Опис книги </label>
+                  <textarea  className="bigInput"
+                onChange={(e) => this.setState({discription: e.target.value})}  />
                 
-                <br></br><label>translator</label>
+               <label>Перекладач</label>
                 <input type="text" className=""
                 onChange={(e) => this.setState({translator: e.target.value})}  name="title" />
-                 <br></br><label>ImageName</label>
+                <label>Назва обгортки книги</label>
                   <input type="text" className=""
                 onChange={(e) => this.setState({ImageName: e.target.value})}  name="title" />
-                <button onClick={()=>this.clickHandler()}>Add Book</button>
+                <button onClick={()=>this.clickHandler()}>Додати книгу на сайт</button>
             </div>
         )
     }

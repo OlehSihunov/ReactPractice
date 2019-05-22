@@ -12,6 +12,7 @@ class ChapterManagment extends React.Component
     {
         return(
             <div className="itemCol">
+              <h1>Управління главами</h1>
             {this.props.chapters.map((chapter)=>
                 {
                    return <Chapter key = {chapter._id} chapter= {chapter}/>

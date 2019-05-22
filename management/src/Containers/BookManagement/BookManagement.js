@@ -12,6 +12,7 @@ class BookManagement extends React.Component
     {
         return(
             <div className="itemCol">
+              <h1>Управління книгами</h1>
             {this.props.books.map((book)=>
                 {
                    return <Book book = {book} key = {book._id}/>

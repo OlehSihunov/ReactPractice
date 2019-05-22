@@ -17,7 +17,7 @@ import { removeChapter } from '../../Actions/chapterActions';
             <p>{this.props.chapter.BookId}</p>
             <p>{ this.props.chapter.Title}</p>
             
-            <button class ="item-button"onClick = {()=>this.clickHandler()}>Delete1</button>
+            <button class ="item-button"onClick = {()=>this.clickHandler()}>Delete</button>
         </div>)
     }
 }

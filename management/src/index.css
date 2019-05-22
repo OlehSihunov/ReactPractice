@@ -32,14 +32,33 @@ code {
   color: white;
   font: 1.2em sans-serif;
   line-height: 200%;
+  border: 1px solid #303745;
 }
+.SideBar a:hover
+{
+  border: 1px solid white;
+  transition: all 0.2s;
+}
+.SideBar a:active{
+  background-color: #FFF;
+  color: #303745;
+}
+
 .itemCol{
   background-color: dimgray;
   width: 100%;
   
 }
+.itemCol h1
+{
+  color: white;
+  text-align: center;
+}
 .Item{
-  
+  border: 1px solid white;
+  border-radius: 5px;
+  padding-left: 2rem;
+  padding-right: 2rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -48,10 +67,69 @@ code {
   margin-left: 3rem;
   margin-right: 3rem;
 }
+.Item:hover
+{
+  border:1px solid dimgray;
+  background-color: #FFF;
+  color: #303745;
+}
 .item-button {
  color:white;
  border-radius: 10px;
  background-color: #303745;
  border: 0px;
  width: 100px;
+}
+.item-button:hover{
+  color: #303745;
+  background-color: white;
+  transition:all 0.2s;
+}
+
+.addBook{
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  background-color: dimgray;
+  width: 100%;
+}
+.addBook input, textarea{
+  
+  min-width: 600px;
+  width: 60%;
+  align-self: center;
+  height: 2rem;
+  border-radius: 15px;
+  border: 0px;
+}
+.addBook .bigInput{
+  height: 15rem;
+}
+.addBook label{
+  align-self: center;
+  color: #FFF;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.addBook h1{
+  color: #FFF;
+  align-self: center;
+}
+.addBook button{
+  width: 30%;
+  align-self: center;
+  margin: 1rem;
+  padding: 0.5rem;
+  color:white;
+  border-radius: 10px;
+  background-color: #303745;
+  border: 0px;
+}
+.addBook select{
+  width: 30%;
+  align-self:center;
+  padding: 0.2rem;
 }
