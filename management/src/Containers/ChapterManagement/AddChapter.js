@@ -39,6 +39,7 @@ import {booksFetchData} from '../../Actions/bookActions'
             <input type="text" className="" onChange={(e) => this.setState({Text: e.target.value})}  name="title" />
             <br></br><label>ChapterNumber</label>
             <input type="text" className="" onChange={(e) => this.setState({ChapterNumber: Number(e.target.value)})}  name="title" />
+            <br></br>
             <button onClick= {()=>this.clickHandler()}>AddChapter</button>
             </div>
         )

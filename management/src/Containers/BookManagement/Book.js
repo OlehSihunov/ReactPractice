@@ -15,7 +15,7 @@ import {connect} from 'react-redux'
         return(<div className="Item">
             <p>{ this.props.book.name}</p>
             <p>{this.props.book.author}</p>
-            <button onClick = {()=>this.clickHandler()}>Delete</button>
+            <button className ="item-button"onClick = {()=>this.clickHandler()}>Delete</button>
         </div>)
     }
 }
